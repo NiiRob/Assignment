@@ -8,7 +8,6 @@ import { CountryService } from 'src/app/_services/country.service';
 })
 export class CountryListComponent implements OnInit {
   panelOpenState = false;
-  tg: boolean
   public countries = [];
 
   constructor(private _countryService: CountryService) { }
