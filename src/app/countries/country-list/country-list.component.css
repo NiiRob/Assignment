@@ -12,7 +12,31 @@
   padding: 24px;
 }
 
+.myColor .mat-expansion-panel-header[aria-disabled=true] {
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
 .bBold {
     font-weight: bold;
     font-size: 1em;
+}
+
+.highlightColor{
+  background-color: rgb(32, 94, 175);
+}
+
+.example-form {
+  min-width: 60px;
+  max-width: 150px;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+/* .example-full-width {
+  width: 100%;
+} */
+
+.myFont {
+  font-size: medium;
 }

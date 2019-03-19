@@ -11,13 +11,16 @@ import { CountryDetailComponent } from './countries/country-detail/country-detai
 import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CountryService } from './_services/country.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CountryFilterPipe } from './Pipes/country-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CountryListComponent,
     CountryDetailComponent,
-    HomeLayoutComponent
+    HomeLayoutComponent,
+    CountryFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,9 @@ import { CountryService } from './_services/country.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [CountryService],
   bootstrap: [AppComponent]

@@ -8,7 +8,7 @@ export interface ICountry {
     demonym: string;
     area: string;
     timezones: string;
-    languages: null;
+    languages: {};
     flag: string;
-    currencies: '';
+    currencies: {};
 }

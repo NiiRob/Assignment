@@ -1,6 +1,7 @@
 import {
 // tslint:disable-next-line: max-line-length
-    MatButtonModule, MatCheckboxModule, MatToolbarModule, MatIconModule, MatExpansionModule, MatSlideToggleModule, MatCardModule, MatGridListModule, MatListModule, MatDividerModule
+    MatButtonModule, MatCheckboxModule, MatToolbarModule, MatIconModule, MatExpansionModule, MatSlideToggleModule, MatCardModule, MatGridListModule, MatListModule, MatDividerModule,
+    MatFormFieldModule, MatInputModule
     } from '@angular/material';
 import { NgModule } from '@angular/core';
 
@@ -15,7 +16,9 @@ import { NgModule } from '@angular/core';
       MatCardModule,
       MatGridListModule,
       MatListModule,
-      MatDividerModule
+      MatDividerModule,
+      MatFormFieldModule,
+      MatInputModule
     ],
   exports: [
       MatButtonModule,
@@ -27,7 +30,9 @@ import { NgModule } from '@angular/core';
       MatCardModule,
       MatGridListModule,
       MatListModule,
-      MatDividerModule
+      MatDividerModule,
+      MatFormFieldModule,
+      MatInputModule
     ],
 })
 export class MaterialModule { }
