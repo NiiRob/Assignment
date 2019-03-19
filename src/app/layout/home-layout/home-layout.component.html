@@ -1,9 +1,16 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <span>Assignment</span>
-        <span class="example-spacer"></span>
-    </mat-toolbar-row>
-</mat-toolbar>
-<div>
-    <app-country-list></app-country-list>
+<div [class.alternative]="otherTheme">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <span>Assignment</span>
+            <span class="example-spacer"></span>
+            <button mat-mini-fab color="accent" (click)="changeTheme()">
+                <mat-icon
+                aria-label="Example icon-button with a heart icon">invert_colors
+                </mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <div>
+        <app-country-list></app-country-list>
+    </div>
 </div>

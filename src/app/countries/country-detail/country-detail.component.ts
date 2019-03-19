@@ -4,7 +4,7 @@ import { CountryService } from 'src/app/_services/country.service';
 @Component({
   selector: 'app-country-detail',
   templateUrl: './country-detail.component.html',
-  styleUrls: ['./country-detail.component.css']
+  styleUrls: ['./country-detail.component.scss']
 })
 export class CountryDetailComponent implements OnInit {
 

@@ -14,6 +14,7 @@
 
 .myColor .mat-expansion-panel-header[aria-disabled=true] {
   color: rgba(0, 0, 0, 0.87) !important;
+  background-color: rgb(188, 206, 226);
 }
 
 .bBold {
@@ -22,7 +23,7 @@
 }
 
 .highlightColor{
-  background-color: rgb(91, 153, 235);
+  background-color: rgb(184, 183, 243);
 }
 
 .example-form {
@@ -39,4 +40,5 @@
 
 .myFont {
   font-size: medium;
+  margin-left: inherit;
 }
