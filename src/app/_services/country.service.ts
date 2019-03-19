@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { ICountry } from '../countries/country';
 import { Observable } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,4 +17,8 @@ export class CountryService {
   getCountry(): Observable<ICountry[]> {
     return this.http.get<ICountry[]>(this._url);
   }
+
+  // errorHandler(error: HttpErrorResponse) {
+  //   return Observable.throwError(error.message || 'Server Error');
+  // }
 }

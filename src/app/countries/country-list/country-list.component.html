@@ -1,13 +1,26 @@
-<mat-accordion>
-    <mat-expansion-panel [disabled]="isDisabled">
-        <mat-expansion-panel-header>
-            This is the expansion title
+<mat-accordion  class="headers-align">
+    <mat-expansion-panel disabled="true" hideToggle>
+        <mat-expansion-panel-header class="bBold">
+            <mat-panel-title>
+                Favorite
+            </mat-panel-title>
+            <mat-panel-title>
+                Country
+            </mat-panel-title>
+            <mat-panel-title>
+                Capital
+            </mat-panel-title>
+            <mat-panel-title>
+                Region
+            </mat-panel-title>
         </mat-expansion-panel-header>
     </mat-expansion-panel>
+
     <mat-expansion-panel *ngFor="let country of countries">
-        <mat-expansion-panel-header>
+        <mat-expansion-panel-header  collapsedHeight="auto" class="headerPad">
             <mat-panel-title>
                 <mat-slide-toggle></mat-slide-toggle>
+                <!-- <mat-checkbox></mat-checkbox> -->
             </mat-panel-title>
             <mat-panel-title>
                 {{country.name}}
@@ -20,40 +33,46 @@
             </mat-panel-title>
         </mat-expansion-panel-header>
         <!-- <app-country-detail></app-country-detail> -->
-        <mat-card>
-            <mat-grid-list cols="4" rowHeight="4:1">
-                <mat-grid-tile>
-                    <mat-list>
-                        <mat-list-item>Subregion:{{country.subregion}}</mat-list-item>
-                        <mat-divider></mat-divider>
-                        <mat-list-item>Population:{{country.population}}</mat-list-item>
-                    </mat-list>
-                </mat-grid-tile>
-                <mat-grid-tile>
-                    <mat-list>
-                        <mat-list-item>Coordinates: {{country.latlng}}</mat-list-item>
-                        <mat-divider></mat-divider>
-                        <mat-list-item>Demonym: {{country.demonym}}</mat-list-item>
-                        <mat-divider></mat-divider>
-                    </mat-list>
-                </mat-grid-tile>
-                <mat-grid-tile>
-                    <mat-list>
-                        <mat-list-item>Area: {{country.area}}</mat-list-item>
-                        <mat-divider></mat-divider>
-                        <mat-list-item>Timezones: {{country.timezones}}</mat-list-item>
-                        <mat-divider></mat-divider>
-                    </mat-list>
-                </mat-grid-tile>
-                <mat-grid-tile>
-                    <mat-list>
-                        <mat-list-item>Languages: {{country.languages}}</mat-list-item>
-                        <mat-divider></mat-divider>
-                        <mat-list-item>Currencies: {{country.currencies[i]}}</mat-list-item>
-                        <mat-divider></mat-divider>
-                    </mat-list>
-                </mat-grid-tile>
-            </mat-grid-list>
+        <mat-card >
+            <div fxLayout="row">
+                <div [fxLayout]="direction" fxLayout.xs="column" fxFlex>
+                    <div fxFlex="1 1 25%">
+                        <mat-list>
+                            <mat-list-item>Subregion: {{country.subregion}}</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item>Population: {{country.population}}</mat-list-item>
+                            <mat-divider></mat-divider>
+                        </mat-list>
+                    </div>
+                    <div fxFlex="1 1 25%">
+                        <mat-list>
+                            <mat-list-item>Coordinates: {{country.latlng}}</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item>Demonym: {{country.demonym}}</mat-list-item>
+                            <mat-divider></mat-divider>
+                        </mat-list>
+                    </div>
+                    <div fxFlex="1 1 25%">
+                        <mat-list>
+                            <mat-list-item>Area: {{country.area}}</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item>Timezones: {{country.timezones}}</mat-list-item>
+                            <mat-divider></mat-divider>
+                        </mat-list>
+                    </div>
+                    <div fxFlex="1 1 25%">
+                        <mat-list>
+                            <mat-list-item>Languages: {{country.languages}}</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item>Currencies: {{country.currencies}}</mat-list-item>
+                            <mat-divider></mat-divider>
+                        </mat-list>
+                    </div> 
+                </div>
+            </div>
+            
         </mat-card>
     </mat-expansion-panel>
 </mat-accordion>
+
+
